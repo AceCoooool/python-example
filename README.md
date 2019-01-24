@@ -35,6 +35,12 @@
   python file_zip.py 指定文件夹 指定后缀名 --remove=False
   ```
 
+- [move_files_over_x_days.py](FILE/move_files_over_x_days.py) - 将源文件夹下面超过N天的文件移到目标文件夹下面去
+
+  ```shell
+  python move_files_over_x_days.py 源文件夹 目标文件夹 天数
+  ```
+
 - 
 
 
