@@ -119,6 +119,13 @@
   python scripy_list.py 指定文件夹 输出文件  # 输出文件即类似log.txt, 方便记录
   ```
 
+- [script_download.py](SCRIPT/script_download.py) - 批量下载指定网址下面指定后缀的文件到指定目录下面去
+
+  ```shell
+  python script_download.py 网址 后缀名 指定目录  # 指定目录指的是保存下载的结果
+  ```
+
+- 
 
 ## 4. 算法相关
 
@@ -160,6 +167,50 @@
 
   > 注：`--c=True`代表计算$C_n^r$，而`--c=False`代表计算$A_n^r$
 
+- [factors.py](ALGO/factors.py) - 获得某个数的所有因子
+
+  ```shell
+  python factors.py 某个正整数
+  ```
+
+- [primes.py](ALGO/primes.py) - 获得`[2, num]`之间的所有质数
+
+  ```shell
+  python primes.py 某个正整数
+  ```
+
+- [kmp.py](ALGO/kmp.py) - 采用kmp算法进行字符串匹配
+
+  ```shell
+  python kmp.py 模板字符串 文本字符串
+  ```
+
+  > 注：如果文本字符串中包含模板字符串则返回True，否则返回False.  
+  >
+  > 其实可以进一步改写为返回具体下标
+
+- [text_replace.py](ALGO/text_replace.py) - 将指定字符串里面所有某符号替换为新的某符号
+
+  ```shell
+  python text_replace.py 指定字符串 某符号 新符合
+  ```
+
+  > 注：这里的符号往往是指分隔符
+
+- [spiral_matrix.py](ALGO/spiral_matrix.py) - 返回`kxk`的螺旋矩阵（从1开始，k为正整数）
+
+  ```shell
+  python spiral_matrix.py k
+  ```
+
+- [two_sum.py](ALGO/two_sum.py) - 寻找数组中是否存在两数之和为某个值
+
+  ```shell
+  python two_sum.py 字符串 某个值
+  ```
+
+  > 注：此处数组用字符串表示，比如`[1, 2, 3, 4]`，这里对应字符串就为`'1 2 3 4'`（记得用空格分隔）
+
 ## 5. 简单示例（不通用的情况）
 
 - [read_csv.py](DEMO/read_csv.py) - 利用pandas读取csv文件的简单实例
@@ -169,3 +220,31 @@
   ```
 
   > 注：csv文件需要注意各元素之间除分隔符外别添加额外的空格等
+
+- [read_excel.py](DEMO/read_excel.py) - 利用xlrd读取xlsx文件的简单实例
+
+  ```shell
+  python read_excel.py 
+  ```
+
+- [write_excel.py](DEMO/write_excel.py) - 利用xlwt写excel文件的简单实例
+
+  ```shell
+  python write_excel.py
+  ```
+
+- [sierpinski_triangle.py](DEMO/sierpinski_triangle.py) - 绘制谢尔宾斯基三角形（可以指定depth）
+
+  ```shell
+  python sierpinski_triangle.py depth
+  ```
+
+  > 注：上述depth代表任意正整数（这个程序看着玩就好.....）
+  >
+  > 关于谢尔宾斯基三角形可以参考：[Sierpinski triangle](https://en.wikipedia.org/wiki/Sierpinski_triangle)
+
+- [webcam.py](DEMO/webcam.py) - 摄像头示例
+
+  ```shell
+  python webcam.py
+  ```
