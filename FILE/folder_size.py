@@ -23,7 +23,7 @@ def folder_size(folder):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Folder size')
-    parser.add_argument('--folder', type=str, default='./test')
+    parser.add_argument('--folder', type=str, default='../data')
 
     config = parser.parse_args()
     folder_size(config.folder)

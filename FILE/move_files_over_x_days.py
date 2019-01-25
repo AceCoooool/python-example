@@ -19,8 +19,8 @@ def move_files(src_dir, dst_dir, days):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='File remove')
-    parser.add_argument('--src_dir', type=str, default='./test')
-    parser.add_argument('--dst_dir', type=str, default='./test')
+    parser.add_argument('--src_dir', type=str, default='../data')
+    parser.add_argument('--dst_dir', type=str, default='../data')
     parser.add_argument('--days', type=int, default=1)
 
     config = parser.parse_args()

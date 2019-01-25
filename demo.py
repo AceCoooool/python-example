@@ -1,22 +1,38 @@
-import os  # Load the Library Module
-from time import strftime  # Load just the strftime Module from Time
+import os
 
-logsdir = "./logs"  # Set the Variable logsdir
-zip_program = "zip"  # Set the Variable zip_program - 1.1
-
-logsdir = os.path.abspath(logsdir)
-
-# for file in os.listdir(logsdir):  # Find all the files in the directory
-#     if file.endswith(".log"):  # Check to ensure the files in the directory end in .log
-#         files1 = file + "." + strftime(
-#             "%Y-%m-%d") + ".zip"  # Create the Variable files1, this is the files in the directory, then we add a suffix with the date and the zip extension
-#         os.chdir(logsdir)  # Change directory to the logsdir
-#         os.system(zip_program + " " + files1 + " " + file)  # Zip the logs into dated zip files for each server. - 1.1
-#         os.remove(file)  # Remove the original log files
-
-filename = 'logzip'
-p = os.listdir(logsdir)
-
-os.system('zip' + " " + "file.zip" + " " + ' '.join(['logs/1.log', 'logs/2.log']))
+# define the result filename
+resultfile = 'result.csv'
 
 
+# the merge func
+def merge():
+    """merge csv files to one file"""
+
+    # indicates use of a global variable.
+    global resultfile
+
+    # use list save the csv files
+    csvfiles = [f for f in os.listdir('.') if f != resultfile \
+                and (len(f.split('.')) >= 2) and f.split('.')[1] == 'csv']
+
+    # open file to write
+    with open(resultfile, 'w') as writefile:
+        for csvfile in csvfiles:
+            with open(csvfile) as readfile:
+                print('File {} readed.'.format(csvfile))
+
+                # do the read and write
+                writefile.write(readfile.read() + '\n')
+    print('\nFile {} wrote.'.format(resultfile))
+
+
+# the main program
+
+def main():
+    print("\t\tMerge\n\n")
+    print("This program merges csv-files to one file\n")
+    merge()
+
+
+if __name__ == '__main__':
+    main()

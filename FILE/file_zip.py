@@ -19,7 +19,7 @@ def file_zip(folder, ext, remove=False):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='File zip')
-    parser.add_argument('--folder', type=str, default='./test')
+    parser.add_argument('--folder', type=str, default='../data/txt')
     parser.add_argument('--ext', type=str, default='txt')
     parser.add_argument('--remove', type=bool, default=False)
 
