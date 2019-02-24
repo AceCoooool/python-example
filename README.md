@@ -1,6 +1,6 @@
 # python-example
 
-> 这里的代码全部来自: https://github.com/geekcomputers/Python
+> 这里的代码大部分修改自: https://github.com/geekcomputers/Python
 
 ## 1. 文件操作相关
 
@@ -248,3 +248,8 @@
   ```shell
   python webcam.py
   ```
+
+## 6. 图像相关
+
+- 系列1：opencv教程（翻译自：[Gasyori100knock](https://github.com/yoyoyo-yo/Gasyori100knock)）
+
